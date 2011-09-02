@@ -1,8 +1,8 @@
-package: profile
+package: profile-base
 priority: normal
 maintainer: Jon Daniel <binarycleric@gmail.com>
 standards-version: 1
-description: Jon Daniel's (binarycleric's) .profile scripts
+description: Make your .profile modular!
 
 dirs:
  .profile.d
