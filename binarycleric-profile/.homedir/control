@@ -1,0 +1,11 @@
+package: profile
+priority: normal
+maintainer: Jon Daniel <binarycleric@gmail.com>
+standards-version: 1
+description: Jon Daniel's (binarycleric's) .profile scripts
+
+dirs:
+ .profile.d
+
+mkdirs:
+ .profile.d
