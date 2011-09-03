@@ -1,0 +1,12 @@
+package: profile-macports
+priority: normal
+maintainer: Jon Daniel <binarycleric@gmail.com>
+depends: profile-base
+standards-version: 1
+description: Sets up macports stuff
+
+dirs:
+ .profile.d
+
+mkdirs:
+ .profile.d
