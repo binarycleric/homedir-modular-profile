@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # For MacPorts
 export MANPATH=/opt/local/share/man:$MANPATH
 export DISPLAY=:0.0

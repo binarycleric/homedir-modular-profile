@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 alias back='popd' # Because I'm lazy.
 
 # Code found at http://www.thrysoee.dk/pushd/
