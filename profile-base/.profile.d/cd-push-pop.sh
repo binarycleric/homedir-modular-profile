@@ -13,7 +13,6 @@ back() {
   popd -n > /dev/null
 }
 
-cd() {
-  builtin cd "$@" || return 1
-  pushd -n $OLDPWD > /dev/null
-}
+# Using an alias instead of a function so 
+# RVM will keep working.
+alias cd="pushd -n $PWD > /dev/null; echo $PWD; cd"
