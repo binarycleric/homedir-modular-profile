@@ -1,30 +1,19 @@
-alias back='popd' # Because I'm lazy.
+# hop pops the directory but then pushes the previous directory
+# back into the stack. Useful if you have to jump between two 
+# directores quite often.
+# 
+# TODO: add help or something incase people get confused.
+hop() {
+  popd -n > /dev/null
+  pushd -n $OLDPWD > /dev/null
+}
 
-# Code found at http://www.thrysoee.dk/pushd/
+# Basic alias of popd
+back() {
+  popd -n > /dev/null
+}
+
 cd() {
-   local i MAX LEN p
-
-   MAX=10
-   LEN=${#DIRSTACK[@]}
-
-   if [ $# -eq 0 ] || [ "$1" = "-" ]; then
-      builtin cd "$@" || return 1
-      pushd -n $OLDPWD > /dev/null
-   else
-      pushd "$@" > /dev/null || return 1
-   fi
-
-   if [ $LEN -gt 1 ]; then
-      for ((i=1; i <= LEN ; i++)); do
-         eval p=~$i
-         if [ "$p" = "$PWD" ]; then
-            popd -n +$i > /dev/null
-            break
-         fi
-      done
-   fi
-
-   if [ $LEN -ge $MAX ]; then
-      popd -n -0 > /dev/null
-   fi
+  builtin cd "$@" || return 1
+  pushd -n $OLDPWD > /dev/null
 }
