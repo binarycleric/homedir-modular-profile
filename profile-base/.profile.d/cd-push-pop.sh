@@ -15,4 +15,4 @@ back() {
 
 # Using an alias instead of a function so 
 # RVM will keep working.
-alias cd="pushd -n $PWD > /dev/null; echo $PWD; cd"
+alias cd="pushd -n $PWD > /dev/null; cd"
