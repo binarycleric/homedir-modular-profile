@@ -1,0 +1,12 @@
+package: profile-vim
+priority: normal
+maintainer: Jon Daniel <binarycleric@gmail.com>
+depends: profile-base
+standards-version: 1
+description: Sets your default editor to vim
+
+dirs:
+ .profile.d
+
+mkdirs:
+ .profile.d
